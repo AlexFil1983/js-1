@@ -10,8 +10,8 @@ function stringExpansion(string) {
           return string;
         }
     
-            let arr = string.split('');
-            let newArr = [];
+            var arr = string.split('');
+            var newArr = [];
             
             arr.map((value, index) => {
         
@@ -24,7 +24,7 @@ function stringExpansion(string) {
         //Push next of digit character to new array with loop
         
         else if ((typeof (+value)) == 'number' ) {
-                for (let i = 0; i < value; i++) {
+                for (var i = 0; i < value; i++) {
             newArr.push(arr[index+1])
                 }
              }
