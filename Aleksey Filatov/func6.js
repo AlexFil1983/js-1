@@ -1,9 +1,8 @@
 //Largest function ES5 sorting
 
 function largest() {
-   var array = Array.from(arguments);
-
-    var largest = array.sort(function (a, b) {
+   var array =  Array.prototype.slice.call(arguments);
+   var largest = array.sort(function (a, b) {
       return b - a;
     });
     console.log(largest[0]);
@@ -12,7 +11,7 @@ function largest() {
 //Smallest function ES5 sorting
 
   function smallest() {
-    var array = Array.from(arguments);
+    var array = Array.prototype.slice.call(arguments);
 
    var smallest = array.sort(function (a, b) {
       return a - b;
